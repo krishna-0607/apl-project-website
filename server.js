@@ -15,10 +15,19 @@ const app = express();
 const PORT = Number(process.env.PORT || 3000);
 const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || "*";
 
+const normalizeOrigin = (origin) => String(origin || "").trim().replace(/\/+$/, "");
 
-const allowedOrigins = CLIENT_ORIGIN.split(",")
-    .map((origin) => origin.trim())
-    .filter(Boolean);
+const allowedOrigins = new Set(
+    CLIENT_ORIGIN.split(",")
+        .map((origin) => normalizeOrigin(origin))
+        .filter(Boolean)
+);
+
+const renderExternalUrl = normalizeOrigin(process.env.RENDER_EXTERNAL_URL);
+if (renderExternalUrl) {
+    // Render sets RENDER_EXTERNAL_URL for the deployed service URL.
+    allowedOrigins.add(renderExternalUrl);
+}
 
 
 app.use(cors({
@@ -28,12 +37,14 @@ app.use(cors({
             return;
         }
 
-        if (allowedOrigins.includes("*") || allowedOrigins.includes(origin)) {
+        const normalizedOrigin = normalizeOrigin(origin);
+
+        if (allowedOrigins.has("*") || allowedOrigins.has(normalizedOrigin)) {
             callback(null, true);
             return;
         }
 
-        callback(new Error(`CORS blocked for origin: ${origin}`));
+        callback(new Error(`CORS blocked for origin: ${normalizedOrigin}`));
     }
 }));
 app.use(express.json());
