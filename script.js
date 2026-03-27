@@ -406,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
             appendMessage("Typing...", "bot");
             const typingNode = chatbotMessages.lastElementChild;
 
-            const timeoutMs = 12000;
+            const timeoutMs = 120000;
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
