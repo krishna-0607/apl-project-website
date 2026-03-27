@@ -15,9 +15,11 @@ const app = express();
 const PORT = Number(process.env.PORT || 3000);
 const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || "*";
 
+
 const allowedOrigins = CLIENT_ORIGIN.split(",")
     .map((origin) => origin.trim())
     .filter(Boolean);
+
 
 app.use(cors({
     origin: (origin, callback) => {
@@ -40,20 +42,27 @@ app.use(express.static(__dirname));
 const modelCandidates = [
     process.env.GEMINI_MODEL || "Gemini 3.1 Flash Lite",
     "Gemini 3.1 Flash Lite",
-    "gemini-2.0-flash",
-    "gemini-1.5-flash"
+    "Gemma 3 1B",
+    "Gemma 3 4B",
+    "Gemma 3 12B",
+    "Gemini Embedding 1",
+    "Gemini 3 Flash Live"
 ];
 
 const modelAliases = {
-    "Gemini 3.1 Flash Lite": "gemini-2.5-flash",
-    "Gemini 3.1 Flash": "gemini-2.5-flash"
+    "Gemini 3.1 Flash Lite": "gemini-3.1-flash-lite",
+    "Gemma 3 1B": "gemma-3-1b-it",
+    "Gemma 3 4B": "gemma-3-4b-it",
+    "Gemma 3 12B": "gemma-3-12b-it",
+    "Gemini Embedding 1": "gemini-embedding-001",
+    "Gemini 3 Flash Live": "gemini-3-flash-live"
 };
 
 const normalizeModelName = (name) => {
     const value = String(name || "").trim();
     const mappedValue = modelAliases[value] || value;
     if (!value) {
-        return "models/gemini-2.5-flash";
+        return "models/gemini-3.1-flash-lite";
     }
     return mappedValue.startsWith("models/") ? mappedValue : `models/${mappedValue}`;
 };
@@ -151,6 +160,6 @@ app.post("/api/enquiry", async (req, res) => {
     }
 });
 
-app.listen(PORT , () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`APL chat API listening on http://localhost:${PORT}`);
 });

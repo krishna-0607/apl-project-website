@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const PROD_API_BASE = window.APL_API_BASE || "https://apl-backend.onrender.com";
+    const PROD_API_BASE = "https://apl-project-website.onrender.com";
     const LOCAL_API_BASE = "http://localhost:3000";
     const isLocalHost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
     const API_BASE = isLocalHost ? LOCAL_API_BASE : PROD_API_BASE  ;
