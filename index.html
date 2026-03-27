@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Pantograph Lifter | Complete Project Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="cinematic-layers" aria-hidden="true">
+        <span class="layer beam beam-a"></span>
+        <span class="layer beam beam-b"></span>
+        <span class="layer grain"></span>
+    </div>
+
+    <nav class="site-nav" id="siteNav">
+        <a class="brand" href="#home" aria-label="Automatic Pantograph Lifter Home">
+            <img class="brand-logo" src="logo.png" alt="APL Project logo">
+            <span class="brand-text">APL<span>Project</span></span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+            <li><a href="#overview"><i class="fa-solid fa-chart-line"></i><span>Overview</span></a></li>
+            <li><a href="#architecture"><i class="fa-solid fa-diagram-project"></i><span>Architecture</span></a></li>
+            <li><a href="#components"><i class="fa-solid fa-microchip"></i><span>Components</span></a></li>
+            <li><a href="#media"><i class="fa-solid fa-photo-film"></i><span>Media</span></a></li>
+            <li><a href="#documents"><i class="fa-solid fa-file-lines"></i><span>Documents</span></a></li>
+            <li><a href="#team"><i class="fa-solid fa-people-group"></i><span>Team</span></a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope-open-text"></i><span>Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+            <p class="eyebrow">Electromechanical Innovation for Industry 4.0</p>
+            <h1>Automatic Pantograph Lifter with High-Speed Zip Chain</h1>
+            <p class="hero-lead">A complete showcase of architecture, implementation, hardware modules, system visuals,
+                video demonstration, and downloadable project documents.</p>
+            <div class="hero-signal" aria-label="Project highlights">
+                <span><i class="fa-solid fa-bolt"></i>Fast Lift Logic</span>
+                <span><i class="fa-solid fa-link"></i>Zip Chain Motion</span>
+                <span><i class="fa-solid fa-shield-halved"></i>Safety Interlocks</span>
+            </div>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#components">Explore Build</a>
+                <a class="btn btn-outline" href="#documents">Open Report</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="project-flow">
+        <div class="project-flow-video" aria-hidden="true">
+            <video autoplay muted loop playsinline preload="metadata">
+                <source src="backgroundvideo.mp4" type="video/mp4">
+            </video>
+            <span class="project-flow-tint"></span>
+        </div>
+
+        <main>
+            <section class="section" id="overview">
+                <div class="container">
+                    <div class="feature-section reveal slide-right">
+                        <div class="feature-content reveal slide-left">
+                            <p class="eyebrow">What We Built</p>
+                            <h2>Automatic Lift System for Industrial Precision</h2>
+                            <p>Industrial automation demands precision lifting solutions that are reliable, efficient,
+                                and
+                                maintenance-free. Our project delivers exactly that with a completely automatic
+                                approach.
+                            </p>
+                            <p>Instead of relying on bulky hydraulic cylinders or manual operation, we engineered a
+                                system where two specially-shaped chains interlock to form a rigid pushing column. This
+                                zip chain technology creates a strong, self-locking mechanism perfect for industrial
+                                lifting applications.</p>
+
+                            <ul class="feature-list feature-points">
+                                <li><i class="fa-solid fa-circle-check"></i>Automated Operation</li>
+                                <li><i class="fa-solid fa-circle-check"></i>Compact Design</li>
+                                <li><i class="fa-solid fa-circle-check"></i>High Reliability</li>
+                                <li><i class="fa-solid fa-circle-check"></i>Precise Control</li>
+                            </ul>
+
+                            <div class="feature-actions">
+                                <a class="btn cta-btn" href="#architecture">View Architecture</a>
+                                <a class="btn btn-outline" href="#components">Explore Components</a>
+                            </div>
+                        </div>
+
+                        <div class="feature-image reveal slide-right">
+                            <img src="pantograph_lifter.jpg" alt="Automatic lift system">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-alt system-design" id="architecture">
+                <div class="container architecture-layout">
+                    <div class="architecture-copy reveal slide-left system-design-content">
+                        <p class="eyebrow">System Design</p>
+                        <h2>Control + Mechanics Unified</h2>
+                        <p>The architecture connects power electronics, sensors, PLC logic, and lift mechanics in one
+                            synchronized framework. This section uses your core design illustrations and implementation
+                            visuals to represent the complete end-to-end system.</p>
+                        <ul class="feature-list major-points system-feature-list">
+                            <li class="point-item"><strong>PLC Controller:</strong> Executes lift, stop, and return
+                                logic with fast signal processing and electrical interlocks.</li>
+                            <li class="point-item"><strong>Zip Chain Drive:</strong> Converts rotational motor output
+                                into rigid linear lifting action for high-speed movement.</li>
+                            <li class="point-item"><strong>Sensing + Safety:</strong> Uses proximity sensing,
+                                overload protections, and emergency paths to secure operation.</li>
+                            <li class="point-item"><strong>Power Module:</strong> Delivers stable regulated DC power
+                                for control electronics and feedback circuitry.</li>
+                        </ul>
+                    </div>
+                    <div class="architecture-media reveal slide-right system-image">
+                        <img src="Architecture.png" alt="Project architecture diagram">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="snapshot">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">Project Snapshot</p>
+                        <h2>Traditional vs Proposed Solution</h2>
+                    </div>
+                    <div class="snapshot-compare reveal slide-right"
+                        aria-label="Traditional versus proposed solution comparison">
+                        <article class="snapshot-card">
+                            <h3>Traditional Method</h3>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Actuation</span>
+                                <p class="snapshot-answer">Hydraulic cylinder based</p>
+                            </div>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Automation</span>
+                                <p class="snapshot-answer">Manual or semi-automatic workflow</p>
+                            </div>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Space Requirement</span>
+                                <p class="snapshot-answer">Bulky assembly footprint</p>
+                            </div>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Maintenance</span>
+                                <p class="snapshot-answer">Frequent servicing required</p>
+                            </div>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Control Precision</span>
+                                <p class="snapshot-answer">Limited repeatability</p>
+                            </div>
+                        </article>
+
+                        <article class="snapshot-card snapshot-card-proposed">
+                            <h3>Proposed Solution</h3>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Actuation</span>
+                                <p class="snapshot-answer">Zip chain rigid-column mechanism</p>
+                            </div>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Automation</span>
+                                <p class="snapshot-answer">Fully automatic PLC-driven operation</p>
+                            </div>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Space Requirement</span>
+                                <p class="snapshot-answer">Compact folding chain architecture</p>
+                            </div>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Maintenance</span>
+                                <p class="snapshot-answer">Low-maintenance electromechanical setup</p>
+                            </div>
+                            <div class="snapshot-item">
+                                <span class="snapshot-label">Control Precision</span>
+                                <p class="snapshot-answer">High repeatability with sensor feedback</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="components">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">Hardware Breakdown</p>
+                        <h2>System Architecture</h2>
+                    </div>
+                    <div class="hardware-stage reveal slide-left hardware-stage-xl">
+                        <div class="stage-glow"></div>
+                        <div class="stage-copy">
+                            <h3>Detailed View of Core Components</h3>
+                            <p>Move left to right and right to left to understand what is behind each core module and
+                                how
+                                the full lift system behaves as one machine.</p>
+                        </div>
+
+                        <div class="hardware-carousel" id="hardwareCarousel">
+                            <button class="hardware-nav prev" id="hardwarePrev" aria-label="Previous hardware slide"><i
+                                    class="fa-solid fa-angle-left"></i></button>
+                            <div class="hardware-window">
+                                <div class="hardware-track" id="hardwareTrack">
+                                    <article class="hardware-slide is-active">
+                                        <div class="hardware-image-wrap">
+                                            <img src="pantograph_lifter.jpg" alt="Pantograph lifter mechanism">
+                                        </div>
+                                        <div class="hardware-copy">
+                                            <p class="hardware-eyebrow">Panthograph Lifter</p>
+                                            <h3>Behind Panthograph Lifter</h3>
+                                            <p>The pantograph lifter transforms linear actuator force into a stable
+                                                scissor
+                                                motion. The geometry keeps platform travel vertical, while distributing
+                                                load evenly across pivot joints to reduce wobble at high speed.</p>
+                                            <ul>
+                                                <li>Multi-link frame converts compact motion into tall extension</li>
+                                                <li>Pivot synchronization helps maintain lift balance</li>
+                                                <li>Mechanical design supports fast rise and controlled return</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+
+                                    <article class="hardware-slide">
+                                        <div class="hardware-image-wrap">
+                                            <img src="zipchain.png" alt="Zip chain assembly model">
+                                        </div>
+                                        <div class="hardware-copy">
+                                            <p class="hardware-eyebrow">Zip Chain Assembly</p>
+                                            <h3>Behind Zip Chain Assembly</h3>
+                                            <p>The zip chain system links and locks chain elements into a rigid column.
+                                                When driven by the motor, it provides long linear travel in a compact
+                                                footprint, replacing bulky hydraulic setups for this use case.</p>
+                                            <ul>
+                                                <li>Rigid chain column forms only during extension</li>
+                                                <li>High travel speed with repeatable precision</li>
+                                                <li>Compact storage path when retracted</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+
+                                    <article class="hardware-slide">
+                                        <div class="hardware-image-wrap">
+                                            <img src="delta14ss2-series-plc.jpg" alt="Delta PLC controller">
+                                        </div>
+                                        <div class="hardware-copy">
+                                            <p class="hardware-eyebrow">Delta PLC Controller</p>
+                                            <h3>Behind Delta PLC Controller</h3>
+                                            <p>The Delta PLC is the logic core that sequences start, stop, safety, and
+                                                return states. It reads sensor inputs, applies ladder logic, and
+                                                controls
+                                                outputs in deterministic scan cycles for reliable automation.</p>
+                                            <ul>
+                                                <li>Deterministic scan loop for predictable control</li>
+                                                <li>Interlocks prevent unsafe motor actions</li>
+                                                <li>Easily expandable I/O for future modules</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+
+                                    <article class="hardware-slide">
+                                        <div class="hardware-image-wrap">
+                                            <img src="PLC.png" alt="PLC interface board">
+                                        </div>
+                                        <div class="hardware-copy">
+                                            <p class="hardware-eyebrow">PLC Interface</p>
+                                            <h3>Behind PLC Interface</h3>
+                                            <p>The interface layer maps field devices to PLC terminals, ensuring clean
+                                                signal routing and clear diagnostics. Proper wiring segregation between
+                                                power and logic reduces electrical noise and communication faults.</p>
+                                            <ul>
+                                                <li>Structured terminal mapping improves maintainability</li>
+                                                <li>Signal conditioning stabilizes input readings</li>
+                                                <li>Status indicators speed up troubleshooting</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+
+                                    <article class="hardware-slide">
+                                        <div class="hardware-image-wrap">
+                                            <img src="IMG_Product_E2FQ-X2x1_xM_corner_JPG_001.jpg"
+                                                alt="Inductive sensor module">
+                                        </div>
+                                        <div class="hardware-copy">
+                                            <p class="hardware-eyebrow">Inductive Sensor</p>
+                                            <h3>Behind Inductive Sensor</h3>
+                                            <p>The inductive sensor detects metal targets without physical contact,
+                                                providing reliable position feedback for stop points and safety checks.
+                                                This contactless detection improves life in dusty industrial
+                                                environments.
+                                            </p>
+                                            <ul>
+                                                <li>Contactless sensing reduces wear and maintenance</li>
+                                                <li>Fast switching supports dynamic control loops</li>
+                                                <li>Reliable trigger points improve operational safety</li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <button class="hardware-nav next" id="hardwareNext" aria-label="Next hardware slide"><i
+                                    class="fa-solid fa-angle-right"></i></button>
+                        </div>
+
+                        <div class="hardware-dots" id="hardwareDots" aria-label="Hardware slide navigation"></div>
+                    </div>
+
+                    <div class="section-header reveal">
+                        <span class="section-tag">Parts We Used</span>
+                        <h2 class="section-title">Inside the <span class="highlight">Build</span></h2>
+                    </div>
+
+                    <div class="components-showcase">
+                        <article class="component-card reveal tilt-card">
+                            <div class="component-image">
+                                <img src="delta14ss2-series-plc.jpg" alt="Delta PLC Controller">
+                                <div class="component-overlay">
+                                    <span class="view-btn"><i class="fas fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                            <div class="component-info">
+                                <h3>Delta PLC (DVP-14SS2)</h3>
+                                <p>This is the brain - takes inputs from sensors and decides what the motor should do.
+                                </p>
+                                <ul class="spec-list">
+                                    <li><i class="fas fa-check"></i> Handles 8 input signals</li>
+                                    <li><i class="fas fa-check"></i> Controls 6 output devices</li>
+                                    <li><i class="fas fa-check"></i> We wrote the logic in ladder diagram</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="component-card reveal tilt-card">
+                            <div class="component-image">
+                                <img src="IMG_Product_E2FQ-X2x1_xM_corner_JPG_001.jpg" alt="Omron Proximity Sensor">
+                                <div class="component-overlay">
+                                    <span class="view-btn"><i class="fas fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                            <div class="component-info">
+                                <h3>Proximity Sensor (Omron)</h3>
+                                <p>Detects when something is nearby without physical contact and triggers lift action.
+                                </p>
+                                <ul class="spec-list">
+                                    <li><i class="fas fa-check"></i> Works in harsh conditions</li>
+                                    <li><i class="fas fa-check"></i> Detects from a distance</li>
+                                    <li><i class="fas fa-check"></i> Waterproof design</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="component-card reveal tilt-card">
+                            <div class="component-image">
+                                <img src="smps.jpg" alt="SMPS Power Supply">
+                                <div class="component-overlay">
+                                    <span class="view-btn"><i class="fas fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                            <div class="component-info">
+                                <h3>Power Supply Unit</h3>
+                                <p>Converts AC mains to clean 24V DC that powers the complete control circuit.</p>
+                                <ul class="spec-list">
+                                    <li><i class="fas fa-check"></i> Stable 24 volt output</li>
+                                    <li><i class="fas fa-check"></i> Heat-resilient operation</li>
+                                    <li><i class="fas fa-check"></i> Built-in safety features</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="component-card reveal tilt-card">
+                            <div class="component-image">
+                                <img src="zipchain.png" alt="Zip Chain Mechanism">
+                                <div class="component-overlay">
+                                    <span class="view-btn"><i class="fas fa-search-plus"></i></span>
+                                </div>
+                            </div>
+                            <div class="component-info">
+                                <h3>Zip Chain Actuator</h3>
+                                <p>The star mechanism where two chains interlock to create a rigid lifting column.</p>
+                                <ul class="spec-list">
+                                    <li><i class="fas fa-check"></i> Pushes up and pulls down</li>
+                                    <li><i class="fas fa-check"></i> Handles heavy loads</li>
+                                    <li><i class="fas fa-check"></i> Folds compactly when idle</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-alt" id="media">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">Visual Media</p>
+                        <h2>Project Gallery and Demonstration Video</h2>
+                    </div>
+                    <div class="media-slider reveal slide-left" id="mediaSlider">
+                        <button class="slider-btn prev" id="slidePrev" aria-label="Previous slide"><i
+                                class="fa-solid fa-angle-left"></i></button>
+                        <div class="slider-window">
+                            <div class="slider-track" id="sliderTrack">
+                                <figure class="gallery-item"><img src="APL_Project.png" alt="Project poster">
+                                    <figcaption>Project Poster</figcaption>
+                                </figure>
+                                <figure class="gallery-item"><img src="background.png" alt="Background artwork">
+                                    <figcaption>Concept Background</figcaption>
+                                </figure>
+                                <figure class="gallery-item"><img src="grp_photo.jpeg" alt="Team photo">
+                                    <figcaption>Team Photo</figcaption>
+                                </figure>
+                                <figure class="gallery-item"><img src="Architecture.png" alt="Architecture board">
+                                    <figcaption>Architecture Board</figcaption>
+                                </figure>
+                                <figure class="gallery-item"><img src="pantograph_lifter.jpg" alt="Lifter build">
+                                    <figcaption>Lifter Build</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <button class="slider-btn next" id="slideNext" aria-label="Next slide"><i
+                                class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                    <div class="video-card reveal slide-right">
+                        <video controls preload="metadata" poster="APL_Project.png">
+                            <source src="Untitled%20design.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video playback.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="documents">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">Documentation</p>
+                        <h2>Report and Technical PDF</h2>
+                    </div>
+                    <div class="docs-actions reveal slide-left">
+                        <a class="btn btn-primary" href="APL.pdf" target="_blank" rel="noopener">Open APL.pdf</a>
+                        <a class="btn btn-outline" href="21EC1811%20%20APL%20PROJECT%20Report.docx" target="_blank"
+                            rel="noopener">Open DOCX Report</a>
+                    </div>
+                    <div class="pdf-preview reveal slide-right">
+                        <iframe src="APL.pdf" title="APL PDF Preview"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-alt" id="team">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">Contributors</p>
+                        <h2>Engineering Team</h2>
+                    </div>
+                    <div class="team-grid">
+                        <article class="team-card reveal">
+                            <h3>Bhavan Shankar M</h3>
+                            <p>Electronics and Communication</p>
+                        </article>
+                        <article class="team-card reveal">
+                            <h3>Bala Kumaran M</h3>
+                            <p>Electronics and Communication</p>
+                        </article>
+                        <article class="team-card reveal">
+                            <h3>Dinesh Karthick S</h3>
+                            <p>Electronics and Communication</p>
+                        </article>
+                    </div>
+                    <p class="supervisor reveal"><strong>Supervisor:</strong> Dr. R. Mary Victoria, M.E., Ph.D. |
+                        Panimalar
+                        Engineering College</p>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">Contact</p>
+                        <h2>Project Enquiry</h2>
+                    </div>
+                    <form class="contact-form reveal slide-left" id="contactForm">
+                        <div class="form-row">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                        <p id="form-status"></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer" id="footer">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <h3>Automatic Pantograph Lifter</h3>
+                    <p>High-speed electromechanical lift architecture driven by zip chain mechanics and PLC-centered
+                        automation.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#overview">Overview</a>
+                    <a href="#architecture">Architecture</a>
+                    <a href="#components">3D Hardware Theater</a>
+                    <a href="#documents">Reports</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Project Highlights</h4>
+                    <p>Fast vertical motion target</p>
+                    <p>Contactless position sensing</p>
+                    <p>Scalable PLC automation layer</p>
+                    <p>Hydraulic-free actuation direction</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="#contact">Send Inquiry</a>
+                    <a href="APL.pdf" target="_blank" rel="noopener">Open Technical PDF</a>
+                    <a href="21EC1811%20%20APL%20PROJECT%20Report.docx" target="_blank" rel="noopener">Open DOCX
+                        Report</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built by ECE Project Team | Panimalar Engineering College | 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+        <img id="lightboxImage" src="" alt="Preview image">
+    </div>
+
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open project chatbot">
+        <span class="chatbot-prompt">Ask me</span>
+        <img src="chatbot.png" alt="Chat assistant avatar" class="chat-avatar">
+    </button>
+
+    <aside id="chatbotPanel" class="chatbot-panel" aria-hidden="true">
+        <div class="chatbot-head">
+            <span class="chat-dot"><img src="chatbot.png" alt="Assistant avatar"></span>
+            <div>
+                <h4>APL Help Assistant</h4>
+                <p>API-ready chat panel</p>
+            </div>
+            <button id="chatbotClose" aria-label="Close chatbot">×</button>
+        </div>
+        <div class="chatbot-body" id="chatbotMessages">
+            <div class="chat-bubble bot">Hello. I can explain architecture, components, and project docs.</div>
+        </div>
+        <form class="chatbot-input" id="chatbotForm">
+            <input id="chatbotText" type="text" placeholder="Ask about the project..." required>
+            <button type="submit" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <div class="chatbot-hint">
+            <p><strong>Try asking:</strong> "What is the zip chain?", "Show me the architecture diagram", "How does the
+                PLC control work?", "Can I see the project report?"</p>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
