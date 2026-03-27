@@ -151,6 +151,6 @@ app.post("/api/enquiry", async (req, res) => {
     }
 });
 
-app.listen(PORT '0.0.0.0' , () => {
+app.listen(PORT , () => {
     console.log(`APL chat API listening on http://localhost:${PORT}`);
 });
