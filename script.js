@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const PROD_API_BASE = "https://apl-project-website.onrender.com";
     const LOCAL_API_BASE = "http://localhost:3000";
     const isLocalHost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
-    const API_BASE = isLocalHost ? LOCAL_API_BASE : PROD_API_BASE  ;
+    const API_BASE = isLocalHost ? LOCAL_API_BASE : PROD_API_BASE;
     const CHAT_API_ENDPOINT = `${API_BASE}/api/chat`;
     const ENQUIRY_API_ENDPOINT = `${API_BASE}/api/enquiry`;
     const BACKEND_SLEEP_HINT = "Server may be waking up on free hosting. Please wait 20-40 seconds and try again.";
@@ -40,8 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const contactForm = document.getElementById("contactForm");
     const formStatus = document.getElementById("form-status");
+    const typewriterHeading = document.getElementById("typewriterHeading");
 
-    const textTargets = document.querySelectorAll(".hero h1, .hero-lead, .section-head h2, .hardware-copy h3, .hardware-copy p");
+    const textTargets = document.querySelectorAll(".hero-lead, .section-head h2, .hardware-copy h3, .hardware-copy p");
 
     const animateText = (node) => {
         if (!node || node.dataset.animated === "true") {
@@ -61,13 +62,57 @@ document.addEventListener("DOMContentLoaded", () => {
         words.forEach((word, index) => {
             const span = document.createElement("span");
             span.className = "word";
-            span.style.animationDelay = `${Math.min(index * 0.04, 0.48)}s`;
+            span.style.animationDelay = `${Math.min(index * 1, 1)}s`;
             span.textContent = word;
             node.appendChild(span);
         });
     };
 
     textTargets.forEach((target) => animateText(target));
+
+    const runTypewriter = (node) => {
+        if (!node || node.dataset.typed === "true") {
+            return;
+        }
+
+        const fullText = (node.dataset.typewriterText || node.textContent || "").trim();
+        if (!fullText) {
+            return;
+        }
+
+        node.dataset.typed = "true";
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            node.textContent = fullText;
+            return;
+        }
+
+        const typeSpeedMs = 160;
+        const completePauseMs = 1700;
+        const restartPauseMs = 1020;
+        let index = 0;
+
+        const typeNext = () => {
+            node.textContent += fullText.charAt(index);
+            index += 1;
+
+            if (index < fullText.length) {
+                window.setTimeout(typeNext, typeSpeedMs);
+                return;
+            }
+
+            window.setTimeout(() => {
+                node.textContent = "";
+                index = 0;
+                window.setTimeout(typeNext, restartPauseMs);
+            }, completePauseMs);
+        };
+
+        node.textContent = "";
+        node.classList.add("is-typing");
+        window.setTimeout(typeNext, 120);
+    };
+
+    setTimeout(() => runTypewriter(typewriterHeading), 380);
 
     if (menuToggle && siteNav) {
         menuToggle.addEventListener("click", () => {
