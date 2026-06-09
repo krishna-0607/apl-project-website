@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dino Runner | APL Project</title>
+        <link rel="stylesheet" href="dino.css" />
+    </head>
+    <body>
+        <main class="shell">
+            <header class="topbar">
+                <a class="back" href="index.html" aria-label="Back to APL Project home">← Home</a>
+                <div class="title">
+                    <h1>Dino Runner</h1>
+                    <p class="subtitle">Press <kbd>Space</kbd>/<kbd>↑</kbd> to jump. Hold <kbd>↓</kbd> to duck.</p>
+                </div>
+                <div class="hud" aria-label="Scoreboard">
+                    <div class="hud-item">
+                        <span class="hud-label">Score</span>
+                        <span class="hud-value" id="score">0</span>
+                    </div>
+                    <div class="hud-item">
+                        <span class="hud-label">Best</span>
+                        <span class="hud-value" id="best">0</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="game-card" aria-label="Game area">
+                <canvas id="game" class="game" width="900" height="240"></canvas>
+
+                <div class="overlay" id="overlay" aria-live="polite">
+                    <h2 class="overlay-title" id="overlayTitle">Ready?</h2>
+                    <p class="overlay-text" id="overlayText">
+                        Click/tap the game or press <kbd>Space</kbd> to start.
+                    </p>
+                    <div class="overlay-actions">
+                        <button class="btn btn-primary" id="primaryAction" type="button">Start</button>
+                        <button class="btn" id="secondaryAction" type="button">Pause</button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p class="footnote">
+                    Tip: If the page is served via Live Server, use <kbd>Space</kbd> to restart after a crash.
+                </p>
+            </footer>
+        </main>
+
+        <script src="dino.js"></script>
+    </body>
+</html>
+

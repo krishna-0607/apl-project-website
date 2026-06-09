@@ -122,8 +122,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navLinks.forEach((link) => {
         link.addEventListener("click", (event) => {
+            const targetId = link.getAttribute("href") || "";
+
+            if (!targetId.startsWith("#")) {
+                siteNav?.classList.remove("open");
+                return;
+            }
+
             event.preventDefault();
-            const targetId = link.getAttribute("href");
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
